@@ -80,4 +80,7 @@ Below is a table that shows some of those tickers along with their score and ret
 
 
 
+
+
+
 ![alt text](https://github.com/MouinAlmasoodi/Stock-Performance/blob/main/Results.JPG?raw=true)
