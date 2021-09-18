@@ -78,5 +78,7 @@ best_performers.rename(columns={'index':'Ticker'}, inplace=True)
 Based on the selected time ```start``` and ```end```, there are 102 tickers that beat the SP500 return.    
 Below is a table that shows some of those tickers along with their score and return relative to SP500. You might be familair with some of the names!   
    
-   
+&nbsp; 
+
+
 ![alt text](https://github.com/MouinAlmasoodi/Stock-Performance/blob/main/Results.JPG?raw=true)
