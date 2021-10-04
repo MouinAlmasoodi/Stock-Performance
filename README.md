@@ -22,7 +22,7 @@ Let's define start and end for the evaluation period
 start = dt.datetime(2016,9,9)
 end = dt.datetime(2021,9,9)
 ```
-Use Yahoo API to access SP500 tickers list
+Use Yahoo API to access SP500 tickers, i.e stocks
 ```python
 SP500_tickers = si.tickers_sp500()
 ```
@@ -30,13 +30,13 @@ Import SP500 historical data into a dataframe
 ```python
 sp500_df = web.DataReader('^GSPC', 'yahoo', start, end)
 ```
-Calculate percent change for SP500 and then the cumulative return   
-It is worth mentioning that the cumulative return is the total change in the investment price over a set time—an aggregate return, not an annualized one.
+Calculate percent change for SP500 index and then compute cumulative return   
+It is worth mentioning that the cumulative return is the total change in the investment price over a set time, an aggregate return, not an annualized one.
 ```python
 sp500_df['Pct Change'] = sp500_df['Adj Close'].pct_change()
 sp500_return = (sp500_df['Pct Change']+1).cumprod()[-1]
 ```
-Import each stock historical data. We will monitor and report the processing time
+Now, let's import each stock historical data. We will monitor and report the processing time
 ```python
 t1 = time.perf_counter() #start counting processing time
 df_fyf = fyf.download(SP500_tickers, start, end)
@@ -47,7 +47,7 @@ Reduce the size of the dataframe to keep needed data
 ```python
 df = df_fyf[['Close', 'Low', 'High']]
 ```
-Cumulative stock return for each stock. This calculation method is vectorized, and hence it's faster than a for-loop
+Calculate cumulative stock return for each stock. This calculation method is vectorized, and hence it's faster than a for-loop
 ```python
 stock_pct = df['Close'].pct_change()
 stock_return = (stock_pct+1).cumprod()[-1:]
@@ -76,7 +76,7 @@ best_performers.rename(columns={'index':'Ticker'}, inplace=True)
 ```
 # Results
 Based on the selected time ```start``` and ```end```, there are 102 tickers that beat the SP500 return.    
-Below is a table that shows some of those tickers along with their score and return relative to SP500. You might be familair with some of the names!   
+Below is a table that shows some of those tickers along with their score and return relative to SP500.  
    
 &nbsp; 
 
