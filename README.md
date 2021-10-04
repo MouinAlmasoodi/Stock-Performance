@@ -8,7 +8,7 @@ The phrase "beating the market" means earning an investment return that exceeds 
 
 # Programming Start Here
 
-Import tools needed for the analysis, we may need all of them
+Import tools needed for the analysis
 ```python
 import datetime as dt
 import pandas as pd
