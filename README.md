@@ -4,7 +4,7 @@ The phrase "beating the market" means earning an investment return that exceeds 
 * The code calculates cumulative return for each ticker and compares it to the SP500 return for the same period.
 * NYSE and NASDAQ tickers can be imported from here: https://www.nasdaq.com/market-activity/stocks/screener
 * The link above provides a CSV file with all the tickers. 
-* For this exercise, we will use Yahoo Finance API to automatically access SP500 hisotrical data. 
+* For this exercise, we will use Yahoo Finance API to access hisotrical data for free. 
 
 # Programming Start Here
 
